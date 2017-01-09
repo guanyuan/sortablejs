@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sortable: `put: []` demo</title>
+
+    <!-- Sortable.js -->
+    <script src="node_modules/sortablejs/Sortable.min.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #eee;
+            margin: 1px;
+            padding: 5px 10px;
+        }
+
+        .sortable-ghost {
+            opacity: .6;
+        }
+
+        .my-handle {
+            cursor: move;
+            cursor: -webkit-grabbing;
+        }
+
+        .chosen {
+            color: #fff;
+            background-color: #c00;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<ul id="foo">
+    <li><span class="my-handle">::</span> list item text one
+    <li><span class="my-handle">::</span> list item text two
+</ul>
+
+</body>
+<script>
+    //put node from foo/bar to qux
+    Sortable.create(foo, {
+        chosenClass: 'chosen'
+    });
+
+</script>
+</html>
